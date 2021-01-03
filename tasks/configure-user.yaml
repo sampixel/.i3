@@ -11,15 +11,3 @@
     dest: "{{ userhome }}/.tmux.conf"
     owner: "{{ username }}"
     group: "{{ username }}"
-
-- name: User Configuration - Copy pictures
-  become_user: "{{ username }}"
-  copy:
-    src: files/pictures/
-    dest: "{{ userhome }}/Pictures/"
-
-- name: User Configuration - Create opt/scripts directory
-  become_user: "{{ username }}"
-  file:
-    path: "{{ userhome }}/opt/scripts"
-    state: directory

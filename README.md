@@ -2,11 +2,10 @@
 ###### personal configuration of i3 window manager
 ![image-preview](/files/images/preview.png)
 ### installation and setup
-#### **$ sudo pacman -S ansible i3**
+#### **$ sudo pacman -S i3**
 ###### then inside your $HOME path:
 #### **$ git clone http://github.com/sampixel/.i3.git**
 #### **$ cd .i3/
-#### **$ ansible-playbook -i ansible.cfg setup.yaml 
 ###### then inside your setup.yaml -> change user name
 ###### check the routes in $HOME/.i3/tasks/configure-i3.yaml  
 
