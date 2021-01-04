@@ -1,0 +1,13 @@
+- hosts: localhost
+  become: true
+
+  vars:
+    username: "manjaro20"
+    userhome: "/home/{{ username }}"
+
+  tasks:
+
+  - include: tasks/configure-software-manjaro.yaml
+    when: ansible_facts["os_family"] == "Archlinux"
+  - include: tasks/configure-user.yaml
+  - include: tasks/configure-i3.yaml
